@@ -1,11 +1,12 @@
 import { nanoid } from 'nanoid';
+import { Input } from './Filter.styled';
 
 const Filter = ({ handleFilter }) => {
   const filterInputId = nanoid();
   return (
     <>
       <label htmlFor={filterInputId}>Find contacts by name</label>
-      <input onChange={handleFilter} id={filterInputId} type="text" />
+      <Input onChange={handleFilter} id={filterInputId} type="text" />
     </>
   );
 };

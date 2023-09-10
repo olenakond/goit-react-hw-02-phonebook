@@ -1,13 +1,15 @@
+import { Element, Button, Name } from './Contact.styled';
+
 const Contact = ({ contact, handleDelete }) => {
   return (
-    <li>
-      <p>
+    <Element>
+      <Name>
         {contact.name}: {contact.number}
-      </p>
-      <button type="button" onClick={() => handleDelete(contact.id)}>
+      </Name>
+      <Button type="button" onClick={() => handleDelete(contact.id)}>
         Delete
-      </button>
-    </li>
+      </Button>
+    </Element>
   );
 };
 
