@@ -8,7 +8,7 @@ const INITIAL_STATE = {
 };
 
 class ContactForm extends Component {
-  state = INITIAL_STATE;
+  state = { ...INITIAL_STATE };
 
   nameInputId = nanoid();
   numberInputId = nanoid();
@@ -19,7 +19,7 @@ class ContactForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.createContact(this.state);
+    this.props.createContact({ ...this.state });
     this.setState(INITIAL_STATE);
   };
 
